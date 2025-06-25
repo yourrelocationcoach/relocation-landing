@@ -2,63 +2,139 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Your Relocation Coach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Relocation Coach | Берлин</title>
+  <meta name="description" content="Your Relocation Coach — авторская методика поиска жилья, реальный опыт эмиграций, консультации, отзывы, прогулки по Берлину.">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #F7F5F2;
-      color: #1D3557;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 480px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px #8DA05B11;
-      padding: 32px;
-      text-align: center;
-    }
-    h1 {
-      color: #E76F51;
-      margin-bottom: 8px;
-      font-size: 2.2em;
-    }
-    .subtitle {
-      color: #FFD166;
-      margin-bottom: 18px;
-      font-size: 1.2em;
-    }
-    .main {
-      font-size: 1.05em;
-      margin-bottom: 12px;
-      line-height: 1.6;
-    }
-    .highlight {
-      color: #8DA05B;
-      font-weight: bold;
-    }
-    .note {
-      margin-top: 24px;
-      font-size: 0.96em;
-      color: #888;
-    }
+    :root { --gold: #FFD166; --terracotta: #E76F51; --graphite: #1D3557; --green: #8DA05B;}
+    body { font-family: 'Montserrat', Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: var(--graphite);}
+    header { background: var(--terracotta); color: #fff; padding: 48px 0 32px 0; text-align: center;}
+    .logo { font-size: 2.3rem; font-weight: 700; letter-spacing: 2px; color: var(--gold); margin-bottom: 8px;}
+    .slogan { font-size: 1.17rem; margin-bottom: 24px; color: #fff;}
+    nav { margin-top: 8px;}
+    nav a { color: var(--gold); margin: 0 16px; text-decoration: none; font-weight: 500; font-size: 1rem;}
+    nav a:hover { color: #fff; text-decoration: underline;}
+    section { max-width: 740px; margin: 40px auto; padding: 0 20px;}
+    h2 { margin-top: 0;}
+    .about-me { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 48px;}
+    .about-info { flex: 2;}
+    .about-photo { flex: 1; min-width: 180px; max-width: 230px; border-radius: 1.5em; overflow: hidden; box-shadow: 0 6px 20px rgba(30,53,87,0.13); border: 3px solid var(--gold);}
+    .about-photo img { width: 100%; height: auto; }
+    .why, .routes, .donate { background: var(--gold); border-radius: 2em; padding: 32px 20px; margin-bottom: 32px;}
+    .why h2, .donate h2 { color: var(--terracotta);}
+    .routes h2 { color: var(--graphite);}
+    .recommendation, .testimonial { background: #f6f7fa; border-left: 5px solid var(--gold); margin-bottom: 20px; padding: 18px 22px 18px 28px; border-radius: 1em;}
+    .recommendation strong { color: var(--terracotta);}
+    .donate-btn { display: inline-block; background: var(--terracotta); color: #fff; font-weight: 600; border-radius: 1em; padding: 13px 32px; margin: 10px 10px 0 0; text-decoration: none; transition: background 0.2s;}
+    .donate-btn:hover { background: var(--gold); color: var(--graphite);}
+    .contacts { background: #f8faf7; border-radius: 2em; padding: 28px 16px; text-align: center;}
+    .contacts a { color: var(--terracotta); text-decoration: none;}
+    form { display: flex; flex-direction: column; gap: 10px; max-width: 420px; margin: 0 auto;}
+    input, textarea { border: 1.5px solid var(--gold); border-radius: 8px; padding: 10px;}
+    button[type="submit"] { background: var(--gold); color: var(--graphite); font-weight: 700; border: none; border-radius: 10px; padding: 11px 0; font-size: 1.1em; cursor: pointer;}
+    @media (max-width: 700px) {.about-me { flex-direction: column; gap: 18px; } .about-photo { margin: 0 auto 16px auto; } section { margin: 20px auto; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Your Relocation Coach</h1>
-    <div class="subtitle">Эмиграция • WBS • Частные школы • Берлин</div>
-    <div class="main">
-      Авторская методика поиска жилья с WBS, <span class="highlight">одобренная и проверенная Берлинским Rathaus и Kanzleramt</span>.<br>
-      32 года опыта эмиграции и интеграции.<br>
-      Эксперт, которому доверяют (отзывы, рекомендательные письма).
-    </div>
-    <div class="note">
-      Бесплатно для клиентов Jobcenter. <br>
-      <b>Прогулки по новостройкам и консультации по интеграции.</b>
-    </div>
+<header>
+  <div class="logo">Your Relocation Coach</div>
+  <div class="slogan">дает людям знания и навыки, необходимые при эмиграции. Берлин. Германия.</div>
+  <nav>
+    <a href="#about">Обо мне</a>
+    <a href="#why">Почему я</a>
+    <a href="#recommend">Рекомендации</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#routes">Прогулки</a>
+    <a href="#donate">Донаты</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+
+<section class="about-me" id="about">
+  <div class="about-info">
+    <h2>Обо мне</h2>
+    <p>Меня зовут Алина Чаплыгина. У меня за плечами три эмиграции: из Сухуми (1992), в Грецию (1993), и в Германию (2016). С 13-летней дочерью, с 300 евро в кармане и без знания языка. Я прошла весь путь сама — от поиска школы до аренды жилья с WBS в Берлине. Уже в первый месяц нашла квартиру в новостройке недалеко от Alexanderplatz.<br><br>
+    Я испытала все трудности, чтобы сделать ваш путь проще. Я помогла десяткам семей переехать, найти жильё и работу. Для меня главное — результат и сдержанное слово.</p>
   </div>
+  <div class="about-photo">
+    <img src="ТВОЕ_ФОТО_ЗДЕСЬ.jpg" alt="Алина Чаплыгина">
+  </div>
+</section>
+
+<section class="why" id="why">
+  <h2>Почему я?</h2>
+  <ul>
+    <li>Авторская методика поиска жилья, проверенная и одобренная в Rathaus и Kanzleramt.</li>
+    <li>Сопровождение семей по всей Германии: Берлин, Саксония, Нижняя Саксония, Баден-Вюртемберг.</li>
+    <li>Я не обещаю, я работаю только на результат.</li>
+    <li>Многолетний опыт реальной эмиграции — не только теория.</li>
+  </ul>
+</section>
+
+<section id="recommend">
+  <h2>Рекомендации и отзывы экспертов</h2>
+  <div class="recommendation">
+    <strong>Клуб Диалог:</strong> «Алина креативна, мотивирована, ответственна. С её помощью были разработаны уникальные форматы для поддержки мигрантов. Рекомендуем для интеграционной и консультационной работы.»
+  </div>
+  <div class="recommendation">
+    <strong>bildungsmarkt & Frau Захариева:</strong> «Алина показала себя как профессионал, с высоким уровнем эмпатии и знаний, умеет вдохновлять и поддерживать людей.»
+  </div>
+</section>
+
+<section id="reviews">
+  <h2>Отзывы клиентов</h2>
+  <div class="testimonial">«Через 2 недели после консультации мы подписали договор на идеальную квартиру!»</div>
+  <div class="testimonial">«После воркшопа по WBS смогли быстро собрать документы и выиграли квартиру в лотерее.»</div>
+  <div class="testimonial">«Рекомендую Алину — без лишней воды, только результат и поддержка на всех этапах.»</div>
+  <!-- Сюда можно добавить реальные скриншоты, ссылки на Инстаграм -->
+</section>
+
+<section class="routes" id="routes">
+  <h2>Прогулки по Берлину</h2>
+  <ul>
+    <li><b>5 июля:</b> Шторковер Штрассе — Neubau и WBS в действии</li>
+    <li><b>26 июля:</b> Шарлоттенбург — Секреты аренды и лайфхаки района</li>
+    <!-- Добавляй новые маршруты — я помогу сверстать! -->
+  </ul>
+  <p>Записаться и узнать подробности: <a href="https://t.me/yourrelocationcoach" target="_blank">@yourrelocationcoach</a></p>
+</section>
+
+<section class="donate" id="donate">
+  <h2>Поддержите проект</h2>
+  <a href="https://www.paypal.me/ВАШPAYPAL" class="donate-btn" target="_blank">PayPal</a>
+  <a href="https://buymeacoffee.com/ВАШBUYME" class="donate-btn" target="_blank">BuyMeACoffee</a>
+  <span style="margin-left:10px; color:#444;">или карта: <b>XXXX XXXX XXXX XXXX</b></span>
+  <p style="margin-top:8px;">Спасибо за поддержку! Донаты помогают делать бесплатные прогулки и консультации для нуждающихся.</p>
+</section>
+
+<section class="contacts" id="contacts">
+  <h2>Контакты</h2>
+  <p>
+    Телефон: <a href="tel:+4915237362918">+49 152 3736 2918</a><br>
+    Email: <a href="mailto:yrc.yourrelocationcoach@gmail.com">yrc.yourrelocationcoach@gmail.com</a><br>
+    Telegram: <a href="https://t.me/yourrelocationcoach" target="_blank">@yourrelocationcoach</a><br>
+    Instagram: <a href="https://www.instagram.com/yourrelocationcoach/" target="_blank">@yourrelocationcoach</a>
+  </p>
+  <form name="contact" autocomplete="off">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="email" name="email" placeholder="Email для связи" required>
+    <textarea name="message" placeholder="Ваш вопрос или запрос" rows="2" required></textarea>
+    <button type="submit">Связаться со мной</button>
+  </form>
+</section>
+
+<footer style="text-align:center;padding:32px 0 18px 0;color:#888;font-size:0.98em;">
+  © 2025 Your Relocation Coach — Алина Чаплыгина. Все права защищены.
+</footer>
+
+<script>
+  document.querySelector('form[name="contact"]').onsubmit = function(e) {
+    e.preventDefault();
+    alert('Спасибо за обращение! Я свяжусь с вами в ближайшее время.');
+    this.reset();
+  };
+</script>
+
 </body>
 </html>
